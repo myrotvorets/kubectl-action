@@ -1,4 +1,4 @@
-name: kubectl
+name: run-kubectl
 author: Myrotvorets
 description: kubectl as a GitHub Action
 runs:
