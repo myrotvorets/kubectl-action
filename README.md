@@ -22,13 +22,13 @@ jobs:
   steps:
     - uses: actions/checkout@v2
     - name: Deploy to cluster
-      uses: myrotvorets/kubectl-action@master
+      uses: myrotvorets/run-kubectl@master
       env:
         KUBE_CONFIG_DATA: ${{ secrets.KUBE_CONFIG_DATA }}
       with:
         args: set image --record deployment/application container=${{ github.repository }}:${{ github.sha }}
     - name: Verify deployment
-      uses: myrotvorets/kubectl-action@master
+      uses: myrotvorets/run-kubectl@master
       env:
         KUBE_CONFIG_DATA: ${{ secrets.KUBE_CONFIG_DATA }}
       with:
