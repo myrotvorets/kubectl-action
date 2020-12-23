@@ -4,7 +4,6 @@ description: kubectl as a GitHub Action
 runs:
   using: docker
   image: Dockerfile
-  post-entrypoint: /usr/local/bin/cleanup.sh
 branding:
   icon: terminal
   color: blue
