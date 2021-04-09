@@ -9,8 +9,6 @@ jobs:
     name: Lint with shellcheck
     runs-on: ubuntu-latest
     steps:
-      - run: shellcheck --version
-
       - name: Check out source code
         uses: actions/checkout@v2
 

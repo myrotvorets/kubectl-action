@@ -2,7 +2,13 @@
 
 set -e
 
-echo "$KUBE_CONFIG_DATA" | base64 -d > /tmp/kubeconfig
+echo "${KUBE_CONFIG_DATA:-}" | base64 -d > /tmp/kubeconfig
 export KUBECONFIG=/tmp/kubeconfig
 
-exec /usr/bin/kubectl $*
+trap 'cleanup' 0 HUP INT QUIT ABRT TERM
+
+cleanup() {
+    rm -f "${KUBECONFIG}"
+}
+
+/usr/bin/kubectl "$@"
