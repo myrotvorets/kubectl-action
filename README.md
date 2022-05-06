@@ -9,7 +9,7 @@ Mainly because we need to be sure that our `kubeconfig` will not leak to third p
 ## Parameters
 
   * `config`: base64-encoded `kubeconfig` (**required**);
-  * `version`: kubectl version, defaults to `latest`. Supported versions: 1.18, 1.19, 1.20, 1.21. `latest` is aliased to the latest available version. See: [Kubernetes version skew policy](https://kubernetes.io/docs/setup/release/version-skew-policy/#kubectl);
+  * `version`: kubectl version, defaults to `latest`. Supported versions: 1.18, 1.19, 1.20, 1.21, 1.22, 1.23, 1.24. `latest` is aliased to the latest available version. See: [Kubernetes version skew policy](https://kubernetes.io/docs/setup/release/version-skew-policy/#kubectl);
   * `args`: parameters passed to `kubectl`.
 
 ## Usage
